@@ -20,19 +20,10 @@ public class FizzBuzzTest {
         assertEquals("fizz", new FizzBuzz().convert(input));
     }
 
-    @Test
-    public void convert_five_to_buzz(){
-        assertEquals("buzz", new FizzBuzz().convert(5));
-    }
-
-    @Test
-    public void convert_ten_to_buzz(){
-        assertEquals("buzz", new FizzBuzz().convert(10));
-    }
-
-    @Test
-    public void convert_twenty_to_buzz(){
-        assertEquals("buzz", new FizzBuzz().convert(20));
+    @ParameterizedTest
+    @CsvSource({ "5", "10", "15" })
+    public void convert_multiples_of_five_to_buzz(int input){
+        assertEquals("buzz", new FizzBuzz().convert(input));
     }
 
 }
