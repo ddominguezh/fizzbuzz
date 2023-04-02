@@ -8,10 +8,7 @@ public class FizzBuzz {
     private static String BUZZ_VALUE = "buzz";
 
     public String convert(int value){
-        if(value == 15){
-            return FIZZ_VALUE + BUZZ_VALUE;
-        }
-        if(value == 30){
+        if(value % (FIZZ_MODULE * BUZZ_MODULE) == 0) {
             return FIZZ_VALUE + BUZZ_VALUE;
         }
         if(value % FIZZ_MODULE == 0){
