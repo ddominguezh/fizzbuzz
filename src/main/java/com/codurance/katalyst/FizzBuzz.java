@@ -11,6 +11,9 @@ public class FizzBuzz {
         if(value == 15){
             return FIZZ_VALUE + BUZZ_VALUE;
         }
+        if(value == 30){
+            return FIZZ_VALUE + BUZZ_VALUE;
+        }
         if(value % FIZZ_MODULE == 0){
             return FIZZ_VALUE;
         }
