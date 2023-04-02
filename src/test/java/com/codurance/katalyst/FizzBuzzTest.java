@@ -25,4 +25,9 @@ public class FizzBuzzTest {
         assertEquals("buzz", new FizzBuzz().convert(5));
     }
 
+    @Test
+    public void convert_ten_to_buzz(){
+        assertEquals("buzz", new FizzBuzz().convert(10));
+    }
+
 }
