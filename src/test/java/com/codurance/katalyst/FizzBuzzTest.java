@@ -26,18 +26,10 @@ public class FizzBuzzTest {
         assertEquals("buzz", new FizzBuzz().convert(input));
     }
 
-    @Test
-    public void convert_fifteen_to_fizzbuzz(){
-        assertEquals("fizzbuzz", new FizzBuzz().convert(15));
+    @ParameterizedTest
+    @CsvSource({ "15", "30", "45" })
+    public void convert_multiples_of_three_and_five_to_buzz(int input){
+        assertEquals("fizzbuzz", new FizzBuzz().convert(input));
     }
 
-    @Test
-    public void convert_thirty_to_fizzbuzz(){
-        assertEquals("fizzbuzz", new FizzBuzz().convert(30));
-    }
-
-    @Test
-    public void convert_forty_five_to_fizzbuzz(){
-        assertEquals("fizzbuzz", new FizzBuzz().convert(45));
-    }
 }
