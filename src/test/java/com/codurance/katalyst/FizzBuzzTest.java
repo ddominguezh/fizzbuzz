@@ -28,6 +28,11 @@ public class FizzBuzzTest {
 
     @Test
     public void convert_fifteen_to_fizzbuzz(){
-    assertEquals("fizzbuzz", new FizzBuzz().convert(15));
+        assertEquals("fizzbuzz", new FizzBuzz().convert(15));
+    }
+
+    @Test
+    public void convert_thirty_to_fizzbuzz(){
+        assertEquals("fizzbuzz", new FizzBuzz().convert(30));
     }
 }
