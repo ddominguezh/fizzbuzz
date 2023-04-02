@@ -1,23 +1,22 @@
 package com.codurance.katalyst;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class FizzBuzzTest {
     
-    @Test
-    public void convert_one_to_one(){
-        assertEquals("1", new FizzBuzz().convert(1));
-    }
-
-    @Test
-    public void convert_two_to_two(){
-        assertEquals("2", new FizzBuzz().convert(2));
+    @ParameterizedTest
+    @CsvSource({ "1,1", "2,2", "4,4" })
+    public void convert_number_to_number(int input, String expected){
+        assertEquals(expected, new FizzBuzz().convert(input));
     }
 
     @Test
     public void convert_three_to_fizz(){
         assertEquals("fizz", new FizzBuzz().convert(3));
     }
+
 }
