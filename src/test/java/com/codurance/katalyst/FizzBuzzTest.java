@@ -14,9 +14,10 @@ public class FizzBuzzTest {
         assertEquals(expected, new FizzBuzz().convert(input));
     }
 
-    @Test
-    public void convert_three_to_fizz(){
-        assertEquals("fizz", new FizzBuzz().convert(3));
+    @ParameterizedTest
+    @CsvSource({ "3", "6", "9" })
+    public void convert_multiples_of_three_to_fizz(int input){
+        assertEquals("fizz", new FizzBuzz().convert(input));
     }
 
 }
