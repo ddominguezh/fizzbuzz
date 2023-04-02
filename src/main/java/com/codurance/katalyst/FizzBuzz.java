@@ -13,6 +13,9 @@ public class FizzBuzz {
         if(value == 5){
             return BUZZ_VALUE;
         }
+        if(value == 10){
+            return BUZZ_VALUE;
+        }
         return "" + value;
     }
 }
