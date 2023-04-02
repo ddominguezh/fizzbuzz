@@ -21,9 +21,13 @@ public class FizzBuzzTest {
     }
 
     @ParameterizedTest
-    @CsvSource({ "5", "10", "15" })
+    @CsvSource({ "5", "10", "20" })
     public void convert_multiples_of_five_to_buzz(int input){
         assertEquals("buzz", new FizzBuzz().convert(input));
     }
 
+    @Test
+    public void convert_fifteen_to_fizzbuzz(){
+    assertEquals("fizzbuzz", new FizzBuzz().convert(15));
+    }
 }
