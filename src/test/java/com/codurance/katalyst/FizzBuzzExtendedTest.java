@@ -14,18 +14,14 @@ public class FizzBuzzExtendedTest {
         assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 
-    @Test
-    public void convert_six_to_fizz(){
-        assertEquals("fizz", new FizzBuzzExtended().convert(6));
+    @ParameterizedTest
+    @CsvSource({ "6", "9", "12" })
+    public void convert_multiples_of_three_and_not_content_number_three_to_fizz(int input){
+        assertEquals("fizz", new FizzBuzzExtended().convert(input));
     }
 
     @Test
-    public void convert_nine_to_fizz(){
-        assertEquals("fizz", new FizzBuzzExtended().convert(9));
-    }
-
-    @Test
-    public void convert_twelve_to_fizz(){
-        assertEquals("fizz", new FizzBuzzExtended().convert(12));
+    public void convert_three_to_fizzfizz(){
+        assertEquals("fizzfizz", new FizzBuzzExtended().convert(3));
     }
 }
