@@ -13,6 +13,10 @@ public class FizzBuzzExtended {
         if(value == 3){
             result += FIZZ_VALUE;
         }
+        if(value == 33){
+            result += FIZZ_VALUE;
+            result += FIZZ_VALUE;
+        }
         if(result != null){
             return result;
         }
