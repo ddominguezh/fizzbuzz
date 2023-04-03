@@ -10,4 +10,9 @@ public class FizzBuzzExtendedTest {
     public void convert_one_to_one(){
         assertEquals("1", new FizzBuzzExtended().convert(1));
     }
+
+    @Test
+    public void convert_two_to_two(){
+        assertEquals("2", new FizzBuzzExtended().convert(2));
+    }
 }
