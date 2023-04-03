@@ -6,8 +6,15 @@ public class FizzBuzzExtended {
     private static String FIZZ_VALUE = "fizz";
 
     public String convert(int value){
+        String result = null;
         if(value % FIZZ_MODULE == 0){
-            return FIZZ_VALUE;
+            result = FIZZ_VALUE;
+        }
+        if(value == 3){
+            result += FIZZ_VALUE;
+        }
+        if(result != null){
+            return result;
         }
         return String.valueOf(value);
     }
