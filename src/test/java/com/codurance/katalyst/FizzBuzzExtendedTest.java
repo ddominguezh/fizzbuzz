@@ -14,4 +14,8 @@ public class FizzBuzzExtendedTest {
         assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 
+    @Test
+    public void convert_siz_to_fizz(){
+        assertEquals("fizz", new FizzBuzzExtended().convert(6));
+    }
 }
