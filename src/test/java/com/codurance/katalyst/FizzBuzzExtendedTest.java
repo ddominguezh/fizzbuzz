@@ -24,4 +24,9 @@ public class FizzBuzzExtendedTest {
     public void convert_three_to_fizzfizz(){
         assertEquals("fizzfizz", new FizzBuzzExtended().convert(3));
     }
+
+    @Test
+    public void convert_thirty_three_to_fizzfizzfizz(){
+        assertEquals("fizzfizzfizz", new FizzBuzzExtended().convert(33));
+    }
 }
