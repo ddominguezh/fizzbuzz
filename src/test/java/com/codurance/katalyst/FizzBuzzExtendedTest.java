@@ -15,7 +15,12 @@ public class FizzBuzzExtendedTest {
     }
 
     @Test
-    public void convert_siz_to_fizz(){
+    public void convert_six_to_fizz(){
         assertEquals("fizz", new FizzBuzzExtended().convert(6));
+    }
+
+    @Test
+    public void convert_nine_to_fizz(){
+        assertEquals("fizz", new FizzBuzzExtended().convert(9));
     }
 }
