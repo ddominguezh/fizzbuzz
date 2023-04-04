@@ -32,7 +32,7 @@ public class FizzBuzzExtendedTest {
     }
 
     @Test
-    public void convert_fifty_five_to_buzzbuzz(){
-        assertEquals("buzzbuzz", new FizzBuzzExtended().convert(55));
+    public void convert_fifty_five_to_buzzbuzzbuzz(){
+        assertEquals("buzzbuzzbuzz", new FizzBuzzExtended().convert(55));
     }
 }
