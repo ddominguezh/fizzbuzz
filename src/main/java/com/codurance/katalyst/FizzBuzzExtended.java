@@ -8,12 +8,12 @@ public class FizzBuzzExtended {
     private static String BUZZ_VALUE = "buzz";
 
     public String convert(int value){
-        String result = null;
+        String result = "";
         if(value % FIZZ_MODULE == 0){
-            result = FIZZ_VALUE;
+            result += FIZZ_VALUE;
         }
         if(value % BUZZ_MODULE == 0){
-            result = BUZZ_VALUE;
+            result += BUZZ_VALUE;
         }
         for(char number : String.valueOf(value).toCharArray()) {
             if(Character.getNumericValue(number) == FIZZ_MODULE){
@@ -22,7 +22,7 @@ public class FizzBuzzExtended {
                 result += BUZZ_VALUE;
             }
         }
-        if(result != null){
+        if(!"".equals(result)){
             return result;
         }
         return String.valueOf(value);
