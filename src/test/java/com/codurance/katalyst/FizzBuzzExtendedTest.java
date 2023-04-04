@@ -38,4 +38,8 @@ public class FizzBuzzExtendedTest {
         assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 
+    @Test
+    public void convert_fifteen_to_fizzbuzzbuzz(){
+        assertEquals("fizzbuzzbuzz", new FizzBuzzExtended().convert(15));
+    }
 }
