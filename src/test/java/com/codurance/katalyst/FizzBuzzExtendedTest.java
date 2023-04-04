@@ -25,4 +25,9 @@ public class FizzBuzzExtendedTest {
     public void convert_multiples_of_three_and_content_number_three_to_fizz(int input, String expected){
         assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
+
+    @Test
+    public void convert_five_to_buzzbuzz(){
+        assertEquals("buzzbuzz", new FizzBuzzExtended().convert(5));
+    }
 }
