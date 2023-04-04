@@ -10,12 +10,10 @@ public class FizzBuzzExtended {
         if(value % FIZZ_MODULE == 0){
             result = FIZZ_VALUE;
         }
-        if(value == 3){
-            result += FIZZ_VALUE;
-        }
-        if(value == 33){
-            result += FIZZ_VALUE;
-            result += FIZZ_VALUE;
+        for(char number : String.valueOf(value).toCharArray()) {
+            if(Character.getNumericValue(number) == FIZZ_MODULE){
+                result += FIZZ_VALUE;
+            }
         }
         if(result != null){
             return result;

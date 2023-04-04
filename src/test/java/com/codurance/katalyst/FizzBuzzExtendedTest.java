@@ -20,13 +20,9 @@ public class FizzBuzzExtendedTest {
         assertEquals("fizz", new FizzBuzzExtended().convert(input));
     }
 
-    @Test
-    public void convert_three_to_fizzfizz(){
-        assertEquals("fizzfizz", new FizzBuzzExtended().convert(3));
-    }
-
-    @Test
-    public void convert_thirty_three_to_fizzfizzfizz(){
-        assertEquals("fizzfizzfizz", new FizzBuzzExtended().convert(33));
+    @ParameterizedTest
+    @CsvSource({ "3,fizzfizz", "33,fizzfizzfizz", "333,fizzfizzfizzfizz" })
+    public void convert_multiples_of_three_and_content_number_three_to_fizz(int input, String expected){
+        assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 }
