@@ -34,23 +34,14 @@ public class FizzBuzzExtendedTest {
 
     @ParameterizedTest
     @CsvSource({ "5,buzzbuzz", "55,buzzbuzzbuzz", "5555,buzzbuzzbuzzbuzzbuzz" })
-    public void convert_multiples_of_five_and_content_number_five_to_fizz(int input, String expected){
+    public void convert_multiples_of_five_and_content_number_five_to_buzz(int input, String expected){
         assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 
-    @Test
-    public void convert_fifteen_to_fizzbuzzbuzz(){
-        assertEquals("fizzbuzzbuzz", new FizzBuzzExtended().convert(15));
+    @ParameterizedTest
+    @CsvSource({ "15,fizzbuzzbuzz", "30,fizzbuzzfizz", "45,fizzbuzzbuzz" })
+    public void convert_multiples_of_fifty_and_content_number_three_or_five(int input, String expected){
+        assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
-
-    @Test
-    public void convert_thirty_to_fizzbuzzfizz(){
-        assertEquals("fizzbuzzfizz", new FizzBuzzExtended().convert(30));
-    }
-
-    @Test
-    public void convert_forty_five_to_fizzbuzzbuzz(){
-        assertEquals("fizzbuzzbuzz", new FizzBuzzExtended().convert(45));
-    }
-
+    
 }
