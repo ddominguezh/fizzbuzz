@@ -27,6 +27,12 @@ public class FizzBuzzExtendedTest {
     }
 
     @ParameterizedTest
+    @CsvSource({ "10", "20", "40" })
+    public void convert_multiples_of_five_and_not_content_number_five_to_buzz(int input){
+        assertEquals("buzz", new FizzBuzzExtended().convert(input));
+    }
+
+    @ParameterizedTest
     @CsvSource({ "5,buzzbuzz", "55,buzzbuzzbuzz", "555,buzzbuzzbuzzbuzz" })
     public void convert_multiples_of_five_and_content_number_five_to_fizz(int input, String expected){
         assertEquals(expected, new FizzBuzzExtended().convert(input));
