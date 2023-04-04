@@ -26,18 +26,10 @@ public class FizzBuzzExtendedTest {
         assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 
-    @Test
-    public void convert_five_to_buzzbuzz(){
-        assertEquals("buzzbuzz", new FizzBuzzExtended().convert(5));
+    @ParameterizedTest
+    @CsvSource({ "5,buzzbuzz", "55,buzzbuzzbuzz", "555,buzzbuzzbuzzbuzz" })
+    public void convert_multiples_of_five_and_content_number_five_to_fizz(int input, String expected){
+        assertEquals(expected, new FizzBuzzExtended().convert(input));
     }
 
-    @Test
-    public void convert_fifty_five_to_buzzbuzzbuzz(){
-        assertEquals("buzzbuzzbuzz", new FizzBuzzExtended().convert(55));
-    }
-
-    @Test
-    public void convert_five_hundred_fifty_five_to_buzzbuzzbuzzbuzz(){
-        assertEquals("buzzbuzzbuzzbuzz", new FizzBuzzExtended().convert(555));
-    }
 }
