@@ -35,4 +35,9 @@ public class FizzBuzzExtendedTest {
     public void convert_fifty_five_to_buzzbuzzbuzz(){
         assertEquals("buzzbuzzbuzz", new FizzBuzzExtended().convert(55));
     }
+
+    @Test
+    public void convert_five_hundred_fifty_five_to_buzzbuzzbuzzbuzz(){
+        assertEquals("buzzbuzzbuzzbuzz", new FizzBuzzExtended().convert(555));
+    }
 }
